@@ -55,19 +55,16 @@ public class AmazonShoppingListProcessorService implements ShoppingListProcessor
 
     @Required
     public void setAwsAPIKey(String awsAPIKey) {
-        logger.debug("setting api key to " + awsAPIKey);
         this.awsAPIKey = awsAPIKey;
     }
 
     @Required
     public void setAwsSecretKey(String awsSecretKey) {
-        logger.debug("setting secret key to " + awsSecretKey);
         this.awsSecretKey = awsSecretKey;
     }
 
     @Required
     public void setAwsAssociateTag(String awsAssociateTag) {
-        logger.debug("setting associate tag  to " + awsAssociateTag);
         this.awsAssociateTag = awsAssociateTag;
     }
 }
