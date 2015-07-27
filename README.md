@@ -16,4 +16,4 @@ a curl command like:
 
     curl -v http://localhost:8080/cart/a168114704da3eef94a729573b56bc0a 
 
-will create a remote cart and return a string represenation of the Purchase URL
+will create a remote cart and return a string representation of the Purchase URL
