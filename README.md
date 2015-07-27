@@ -10,7 +10,7 @@ You need to create your own AWS account and Affiliate Account to get an API key,
 Copy these values to src/main/resources/app.properties.template and rename the file to src/main/resources/app.properties
 Then you can run:
 
-    mvn clean package jetty:run to test
+    mvn clean package jetty:run
 
 a curl command like:
 
