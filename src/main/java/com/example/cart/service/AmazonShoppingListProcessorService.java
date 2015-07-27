@@ -33,9 +33,7 @@ public class AmazonShoppingListProcessorService implements ShoppingListProcessor
         for (Item item : shoppingList.getItems()) {
             logger.debug("processing shopping item " + item.getName());
             com.ECS.client.jax.CartCreateRequest.Items.Item cartCreateRequestItem = new com.ECS.client.jax.CartCreateRequest.Items.Item();
-            logger.debug("setting asin to " + item.getId());
             cartCreateRequestItem.setASIN(item.getId());
-            logger.debug("setting quantity to " + item.getQuantity()); 
             cartCreateRequestItem.setQuantity(BigInteger.valueOf(item.getQuantity()));
             cartCreateRequestItem.setAssociateTag(awsAssociateTag);
             cartCreateRequestItems.getItem().add(cartCreateRequestItem);
