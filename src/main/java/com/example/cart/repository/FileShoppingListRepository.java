@@ -15,15 +15,15 @@ public class FileShoppingListRepository implements ShoppingListRepository {
     public ShoppingList getShoppingList(final String id) {
         ShoppingList shoppingList = new ShoppingList();
         try {
-        File directory = new File(directoryPath);
-        File [] files = directory.listFiles(new FileFilter() {
-                public boolean accept(File pathname) {
-                    return pathname.getName().equals(id + ".lst");
-                }
-            });
+            File directory = new File(directoryPath);
+            File [] files = directory.listFiles(new FileFilter() {
+                    public boolean accept(File pathname) {
+                        return pathname.getName().equals(id + ".lst");
+                    }
+                });
 
-        if (files.length == 1)
-            processFileToShoppingList(files[0], shoppingList);
+            if (files.length == 1)
+                processFileToShoppingList(files[0], shoppingList);
 
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
